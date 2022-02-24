@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { fetchPosts } from "./redux/actionCreators/postActionCreators";
 import NavBarComponentMain from "./Components/NavBar/NavBar";
 import Post from "./Components/Blog/Post";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const isLoading = useSelector((state) => state.post.isLoading);
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/">
           <NavBarComponentMain/>
           <Home />
+          <Footer/>
         </Route>
         <Route path="/blog/:postId" component={() => <Post />} />
         <Route path="/admin" component={() => <Admin />} />

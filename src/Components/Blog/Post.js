@@ -32,21 +32,70 @@ const Post = () => {
   }
   return (
     <div className="main_body">
-      <div className="content-container-1">
-        <h1 className="content-title" style={{ fontStyle: "5vw" }}>
-          {currentPost.postData.title}
-        </h1>
-        <p className="content-author-date" style={{ fontStyle: "1vw" }}>
-          By {currentPost.postData.author} |{" "}
-          {new Date(
-            currentPost.postData.date.seconds * 1000
-          ).toLocaleDateString("en-US", { timeZone: "UTC" })}
-        </p>
-        <img src={currentPost.postData.image} />
-        <p className="content-paragraph" style={{ fontStyle: "3vw" }}>
-          {currentPost.postData.description}
-        </p>
-        <CommentForm/>
+      <div className="content-body">
+        <div className="container-md">
+          <h1 className="content-title" style={{ fontStyle: "5vw" }}>
+            {currentPost.postData.title}
+          </h1>
+          <p className="content-author-date" style={{ fontStyle: "1vw" }}>
+            By {currentPost.postData.author} |{" "}
+            {new Date(
+              currentPost.postData.date.seconds * 1000
+            ).toLocaleDateString("en-US", { timeZone: "UTC" })}
+          </p>
+          <img src={currentPost.postData.image} style={{ width: "100%" }} />
+          <p className="content-paragraph" style={{ fontStyle: "3vw" }}>
+            {currentPost.postData.description}
+          </p>
+          <hr className="content-line" />
+          <h1 className="content-comment-header" style={{ fontStyle: "2vw" }}>
+            Comments
+          </h1>
+          <div className="content-section-comment">
+            <h1 style={{ fontStyle: "2vw" }} className="content-name">
+              Juan Dela Cruz
+            </h1>
+            <p style={{ fontStyle: "2vw" }} className="content-comment">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+              pariatur.
+            </p>
+          </div>
+          <br />
+          <div className="content-section-comment">
+            <h1 style={{ fontStyle: "2vw" }} className="content-name">
+              Juan Dela Cruz
+            </h1>
+            <p style={{ fontStyle: "2vw" }} className="content-comment">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+              pariatur.
+            </p>
+          </div>
+          <br />
+          <div className="content-section-comment">
+            <h1 style={{ fontStyle: "2vw" }} className="content-name">
+              Juan Dela Cruz
+            </h1>
+            <p style={{ fontStyle: "2vw" }} className="content-comment">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+              pariatur.
+            </p>
+          </div>
+          <br />
+          <div className="content-section-comment">
+            <h1 style={{ fontStyle: "2vw" }} className="content-name">
+              Juan Dela Cruz
+            </h1>
+            <p style={{ fontStyle: "2vw" }} className="content-comment">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, nulla
+              pariatur.
+            </p>
+          </div>
+          <br />
+          <h1 className="content-leave-header" style={{ fontStyle: "2vw" }}>
+            Leave a comment
+          </h1>
+          <CommentForm />
+        </div>
       </div>
     </div>
   );

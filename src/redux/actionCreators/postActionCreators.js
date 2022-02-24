@@ -3,7 +3,7 @@ import { firestore, storage } from "../../config/firebase";
 import * as types from "../types/postTypes";
 
 //action
-const setLoading = (data) => ({
+export const setLoading = (data) => ({
   type: types.SET_LOADING,
   payload: data,
 });
@@ -18,8 +18,12 @@ const getPosts = (data) => ({
   payload: data,
 });
 
-const resetPosts = (data) => ({
+const resetPosts = () => ({
   type: types.RESET_POST,
+});
+const addComment = (comment, postId) => ({
+  type: types.ADD_COMMENT,
+  payload: { comment, postId },
 });
 
 //ACTION CREATORS
@@ -68,7 +72,7 @@ export const doPost = (data, image, setProgress) => (dispatch) => {
     });
 };
 
-export const fetchPosts = () => dispatch => {
+export const fetchPosts = () => (dispatch) => {
   dispatch(setLoading(true));
 
   firestore
@@ -76,7 +80,7 @@ export const fetchPosts = () => dispatch => {
     .get()
     .then((posts) => {
       const allPosts = [];
-      posts.forEach(post => {
+      posts.forEach((post) => {
         const data = { postData: post.data(), postId: post.id };
         allPosts.push(data);
       });
@@ -88,4 +92,9 @@ export const fetchPosts = () => dispatch => {
       console.log(err);
       toast.error(err);
     });
+};
+
+export const doComment = (comment, postId) => (dispatch) => {
+
+  
 };

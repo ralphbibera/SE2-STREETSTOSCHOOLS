@@ -3,9 +3,13 @@ import { Button, Col, Form, ProgressBar } from "react-bootstrap";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { shallowEqual, useDispatch } from "react-redux";
-import { doPost, fetchPosts } from "../../../redux/actionCreators/postActionCreators";
+import {
+  doPost,
+  fetchPosts,
+  setLoading,
+} from "../../../redux/actionCreators/postActionCreators";
 import { useSelector } from "react-redux";
-
+import { useHistory } from "react-router";
 
 const AddPost = () => {
   const { user, userId } = useSelector(
@@ -19,6 +23,7 @@ const AddPost = () => {
   const [author, setAuthor] = useState("");
   const [progress, setProgress] = useState(0);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -55,6 +60,7 @@ const AddPost = () => {
     };
 
     dispatch(doPost(data, image, setProgress));
+
   };
   return (
     <div>
