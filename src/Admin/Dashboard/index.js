@@ -7,6 +7,8 @@ import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
 import Register from "../Auth/Register/Register";
 import NavbarComponent from "./NavBar/NavbarComponent";
 import ManagePost from "./ManagePost/ManagePost";
+import ManageBanner from "./ManageBanner/ManageBanner";
+
 
 const Dashboard = () => {
   const { path } = useRouteMatch();
@@ -33,8 +35,12 @@ const Dashboard = () => {
             <Link to="/admin/dashboard/adduser">Add User</Link>
           </Route>
           <Route
+            path={path + "/manage-banner"}
+            component={() => <ManageBanner/>}
+          />
+          <Route
             path={path + "/manage-post"}
-            component={() => <ManagePost /> }
+            component={() => <ManagePost />}
           />
           <Route path={path + "/adduser"} component={() => <Register />} />
         </Switch>

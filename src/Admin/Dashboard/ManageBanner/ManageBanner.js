@@ -1,38 +1,29 @@
 import "../../Stylesheets/table.css";
 import { Button, Col, Form, ProgressBar } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { shallowEqual, useDispatch } from "react-redux";
-import { doPost } from "../../../redux/actionCreators/postActionCreators";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { shallowEqual } from "react-redux";
+import { doBanners } from "../../../redux/actionCreators/bannerActionCreators";
+import { fetchBanners } from "../../../redux/actionCreators/bannerActionCreators";
 import { useHistory } from "react-router";
+import useBanners from "../../useBanners";
 
-const AddPost = () => {
-  const { user, userId } = useSelector(
-    (state) => ({ user: state.auth.user, userId: state.auth.user_id }),
-    shallowEqual
-  );
+const ManageBanner = () => {
   const [title, setTitle] = useState("");
-  const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
-  const [description, setDescription] = useState("");
-  const [author, setAuthor] = useState("");
   const [progress, setProgress] = useState(0);
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!title || !category || !description || !author) {
+    if (!title) {
       return toast.warning("Please fill all fields");
     }
 
     if (!image || image === undefined) {
       return toast.warning("Please select an image");
-    }
-
-    if (description.length < 100) {
-      return toast.warning("Description shout be at least 100 characters");
     }
 
     if (title.trim().split(" ").length < 2) {
@@ -45,16 +36,31 @@ const AddPost = () => {
 
     const data = {
       title: title,
-      category: category.split(","),
-      author: author,
-      date: new Date(),
-      description: description,
       image: "",
-      comments: [],
-      createdBy: userId,
     };
-    dispatch(doPost(data, image, setProgress));
+    
+    dispatch(doBanners(data, image, setProgress));
   };
+  
+  const { isLoading, banners } = useSelector(
+    (state) => ({
+      isLoading: state.banner.isLoading,
+      banners: state.banner.banners,
+    }),
+    shallowEqual
+  );
+
+  useEffect(() => {
+    if (isLoading) {
+      dispatch(fetchBanners());
+    }
+  }, [isLoading, dispatch]);
+
+  const myBanners = banners;
+
+  const {bbanners} = useBanners('banners');
+  console.log(bbanners)
+
   return (
     <div>
       <Col className="mx-auto">
@@ -78,34 +84,6 @@ const AddPost = () => {
                 onChange={(e) => setTitle(e.target.value)}
               />
             </Form.Group>
-            <Form.Group controlId="categories" className="my-2">
-              <Form.Control
-                type="text"
-                name="categories"
-                placeholder="Categories"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group controlId="author" className="my-2">
-              <Form.Control
-                type="text"
-                name="author"
-                placeholder="Author"
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group controlId="desc" className="my-2">
-              <textarea
-                name="desc"
-                placeholder="Description"
-                rows="10"
-                className="form-control"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              />
-            </Form.Group>
             <Form.Group controlId="file" className="my-2">
               <Form.Control
                 type="file"
@@ -120,14 +98,38 @@ const AddPost = () => {
                 bg="dark"
                 className="form-control"
               >
-                Add Post
+                Add Banner
               </Button>
             </Form.Group>
           </Form>
         )}
       </Col>
+
+      {isLoading ? (
+        <h1 className="text-center my-5">Loading...</h1>
+      ) : (
+        myBanners.map((bnrs, index) => (
+          <table key={index}>
+            <tbody style={{ fontsize: "15px" }}>
+              <tr>
+                <td>{index + 1}</td>
+                <td>
+                  <img id="post-img" src={bnrs.bannerData.image} />
+                </td>
+                <td>{bnrs.bannerData.title}</td>
+                <td>
+                  <Button className="action-buttons edit-btn">Edit</Button>
+                </td>
+                <td>
+                  <Button className="action-buttons delete-btn">Archive</Button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        ))
+      )}
     </div>
   );
 };
 
-export default AddPost;
+export default ManageBanner;

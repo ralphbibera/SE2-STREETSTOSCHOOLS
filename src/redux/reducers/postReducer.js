@@ -15,7 +15,7 @@ const postReducer = (state = initialState, { type, payload }) => {
       return state;
     case types.SET_POSTS:
       state = { ...state, posts: payload };
-      return state;
+      return state
     case types.RESET_POST:
       state = { initialState };
       return state;

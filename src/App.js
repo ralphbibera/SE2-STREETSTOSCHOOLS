@@ -9,9 +9,12 @@ import { fetchPosts } from "./redux/actionCreators/postActionCreators";
 import NavBarComponentMain from "./Components/NavBar/NavBar";
 import Post from "./Components/Blog/Post";
 import Footer from "./Components/Footer/Footer";
+import { fetchBanners } from "./redux/actionCreators/bannerActionCreators";
 
 function App() {
   const isLoading = useSelector((state) => state.post.isLoading);
+  const isLoadingBanner = useSelector((state) => state.banner.isLoading);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,6 +23,13 @@ function App() {
     }
   }, [isLoading, dispatch]);
 
+  useEffect(() => {
+    if (isLoadingBanner) {
+      dispatch(fetchBanners());
+    }
+  }, [isLoadingBanner, dispatch]);
+  
+  
   return (
     <div className="App">
       <ToastContainer />

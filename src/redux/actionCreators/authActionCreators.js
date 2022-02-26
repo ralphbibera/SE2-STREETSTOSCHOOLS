@@ -1,7 +1,7 @@
 import * as types from "../types/authTypes";
 
-// auth actions
 
+// auth actions
 const setUser = (data) => ({
   type: types.SET_USER,
   payload: data,

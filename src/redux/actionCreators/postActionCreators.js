@@ -3,7 +3,7 @@ import { firestore, storage } from "../../config/firebase";
 import * as types from "../types/postTypes";
 
 //action
-export const setLoading = (data) => ({
+const setLoading = (data) => ({
   type: types.SET_LOADING,
   payload: data,
 });
@@ -74,17 +74,15 @@ export const doPost = (data, image, setProgress) => (dispatch) => {
 
 export const fetchPosts = () => (dispatch) => {
   dispatch(setLoading(true));
-
   firestore
     .collection("posts")
     .get()
     .then((posts) => {
-      const allPosts = [];
+      let allPosts = [];
       posts.forEach((post) => {
         const data = { postData: post.data(), postId: post.id };
         allPosts.push(data);
       });
-
       dispatch(getPosts(allPosts));
       dispatch(setLoading(false));
     })
@@ -94,7 +92,5 @@ export const fetchPosts = () => (dispatch) => {
     });
 };
 
-export const doComment = (comment, postId) => (dispatch) => {
+export const doComment = (comment, postId) => (dispatch) => {};
 
-  
-};
