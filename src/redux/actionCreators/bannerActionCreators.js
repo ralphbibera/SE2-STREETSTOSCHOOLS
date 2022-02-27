@@ -1,4 +1,3 @@
-import { useHistory } from "react-router";
 import { toast } from "react-toastify";
 import { firestore, storage } from "../../config/firebase";
 import * as types from "../types/bannerTypes";

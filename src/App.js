@@ -10,10 +10,13 @@ import NavBarComponentMain from "./Components/NavBar/NavBar";
 import Post from "./Components/Blog/Post";
 import Footer from "./Components/Footer/Footer";
 import { fetchBanners } from "./redux/actionCreators/bannerActionCreators";
+import Posts from "./Components/Posts"
+
 
 function App() {
   const isLoading = useSelector((state) => state.post.isLoading);
   const isLoadingBanner = useSelector((state) => state.banner.isLoading);
+
 
   const dispatch = useDispatch();
 
@@ -39,6 +42,7 @@ function App() {
           <Home />
           <Footer/>
         </Route>
+        <Route path="/posts/"component={() => <Posts /> }/>
         <Route path="/blog/:postId" component={() => <Post />} />
         <Route path="/admin" component={() => <Admin />} />
       </Switch>
