@@ -1,51 +1,67 @@
-body {
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-weight: bold;
-  font-family: "Noto Sans";
+.nav-item{
+	padding: .5rem;
 }
 
-.sidenav {
-  background-color: rgba(255, 255, 255, 0.6);
-  height: 100%;
-  width: 320px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  border-right: 1px solid black;
+.navbar-custom { 
+  background-color:white; 
+} 
+
+.navbar-nav a{
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Noto Sans', sans-serif;
+	letter-spacing: 1px;
 }
 
-.sidenav a {
-  text-align: center;
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  display: block;
-  color: black !important;
-  font-family: "Noto Sans", sans-serif;
+.navbar-light .navbar-nav .nav-link:hover{
+ color: #467aac;
+    }
+
+.navbar-light .navbar-nav .nav-link {
+	color: 	black;
 }
 
-.sidenav #sidenav-logo {
-  width: 100%;
-  padding: 20px;
+.navbar-nav{
+	text-align: center;
 }
 
-.sidenav .nav-link:hover {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+.nav-link{
+	padding: .2rem 1rem;
 }
 
-.main {
-  margin-left: 320px; /* Same as the width of the sidenav */
-  font-size: 25px;
-  padding: 0px 10px;
-  max-width: 100%;
-}
+  #active{
+    color: #467aac
+  }
+  .nav_donate_btn{
+    padding: 10px 30px;
+    margin: 0;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-weight: Bold;
+    margin: -15px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #FDDA76;
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+  }
+  .donate-btn{
+    padding: 10px 30px;
+    margin: 0;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-weight: Bold;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #FDDA76;
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    width: 200px;
+    max-width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-.sidenav .active {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}

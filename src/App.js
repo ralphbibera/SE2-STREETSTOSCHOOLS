@@ -1,4 +1,5 @@
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/index";
 import Admin from "./Admin";
@@ -25,7 +26,9 @@ function App() {
       <ToastContainer />
       <Switch>
         <Route exact path="/">
+        <div className="content-wrap">
           <NavBarComponentMain/>
+        </div>
           <Home />
           <Footer/>
         </Route>
