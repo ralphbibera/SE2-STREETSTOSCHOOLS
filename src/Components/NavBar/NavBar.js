@@ -1,13 +1,14 @@
 import { Nav } from "react-bootstrap";
 import { Link,NavLink } from "react-router-dom";
 import "../Stylesheets/NavBar.css";
+import logo from "../Assets/logo.png"
 
 const NavbarComp = () => {
     return (
       <div>
         <Nav className="navbar navbar-custom navbar-light navbar-expand-lg fixed-top">
           <Link className="navbar-brand" to="/"><img
-            src="./Images/sts_logo.png"
+            src={logo}
             width="100"
             height="80"
             alt="STS Logo"

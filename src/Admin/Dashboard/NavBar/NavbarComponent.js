@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import "../../Stylesheets/NavBar.css";
 import logo from "../../Assets/logo.png";
-import { fetchBanners } from "../../../redux/actionCreators/bannerActionCreators";
 
 const NavbarComponent = () => {
 
