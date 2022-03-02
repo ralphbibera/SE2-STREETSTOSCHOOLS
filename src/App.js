@@ -16,8 +16,6 @@ import Posts from "./Components/Posts"
 
 function App() {
   const isLoading = useSelector((state) => state.post.isLoading);
-  const isLoadingBanner = useSelector((state) => state.banner.isLoading);
-
 
   const dispatch = useDispatch();
 
@@ -27,21 +25,13 @@ function App() {
     }
   }, [isLoading, dispatch]);
 
-  useEffect(() => {
-    if (isLoadingBanner) {
-      dispatch(fetchBanners());
-    }
-  }, [isLoadingBanner, dispatch]);
-  
-  
+ 
   return (
     <div className="App">
       <ToastContainer />
       <Switch>
         <Route exact path="/">
-        <div className="content-wrap">
           <NavBarComponentMain/>
-        </div>
           <Home />
           <Footer/>
         </Route>
