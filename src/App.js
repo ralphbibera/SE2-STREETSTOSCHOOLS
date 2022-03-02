@@ -29,6 +29,16 @@ function App() {
           <Home />
           <Footer/>
         </Route>
+        <Route path="/Registration">
+          <NavBarComponentMain/>
+          <Home />
+          <Footer/>
+        </Route>
+        <Route path="/Content">
+          <NavBarComponentMain/>
+          <Home />
+          <Footer/>
+        </Route>
         <Route path="/blog/:postId" component={() => <Post />} />
         <Route path="/admin" component={() => <Admin />} />
       </Switch>
