@@ -25,13 +25,17 @@
 	text-align: center;
 }
 
-.nav-link{
-	padding: .2rem 1rem;
+.nav-link-focus{
+  text-decoration: none;
+  color: 	black;
 }
-
-  #active{
-    color: #467aac
-  }
+.nav-link-focus:hover{
+  text-decoration: none;
+  color: #467aac;
+}
+.nav-link-focus:focus{
+  color: #467aac;
+}
   .nav_donate_btn{
     padding: 10px 30px;
     margin: 0;

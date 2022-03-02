@@ -21,32 +21,32 @@ export default class NavbarComp extends Component {
       <ul className="navbar-nav ml-auto d-flex align-items-center">
       <li className="nav-item">
           <Link className="nav-link" to="home" spy={true} smooth={true}>
-              <a className="nav-link" href='#'>Home</a>
+              <a className="nav-link-focus" href='./Components/Home.js'>Home</a>
           </Link>
       </li>
       <li className="nav-item">
           <Link className="nav-link" to="blog" spy={true} smooth={true}>
-          <a className="nav-link" href="#">Blog</a>
+          <a className="nav-link-focus" href="./Components/Blog.js">Blog</a>
           </Link>
       </li>
       <li className="nav-item">
           <Link className="nav-link" to="register" spy={true} smooth={true}>
-          <a className="nav-link" href="#">Partner & Volunteer</a>
+          <a className="nav-link-focus" href="./Components/Register.js">Partner & Volunteer</a>
           </Link>
       </li>
       <li className="nav-item">
           <Link className="nav-link" to="about" spy={true} smooth={true}>
-          <a className="nav-link" href="#">About Us</a>
+          <a className="nav-link-focus" href="./Components/About.js">About Us</a>
           </Link>
       </li>
       <li className="nav-item">
           <Link className="nav-link" to="contact" spy={true} smooth={true}>
-          <a className="nav-link" href="#">Contact Us</a>
+          <a className="nav-link-focus" href="./Components/Contacts.js">Contact Us</a>
           </Link>
       </li>
       <li className="nav-item">
           <Link className="nav-link" to="donate" spy={true} smooth={true}>
-          <a className="btn nav-link donate-btn" href="#" >Donate</a>
+          <a className="btn nav-link donate-btn" href="./Components/Donate.js" >Donate</a>
           </Link>
       </li>
       </ul>
