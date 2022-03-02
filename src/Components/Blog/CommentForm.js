@@ -15,67 +15,53 @@ const CommentForm = () => {
       {isLoggedIn ? (
         <>
           <form>
-            <div className="form-group">
-              <textarea
-                className="form-control"
-                id="input-comment"
-                placeholder="Write a comment..."
-              ></textarea>
-            </div>
-            <div className="row gy-3">
-              <div className="col-sm-3">
-                <button type="button" className="btn btn-cancel">
-                  Cancel
-                </button>
-              </div>
-              <div className="col-sm-3">
-                <button className="btn btn-submit" type="submit">
-                  Post
-                </button>
-              </div>
-            </div>
+          <div>
+        <div classname="form-group">
+          <textarea classname="form-control" id="input-comment" placeholder="Write a comment..." defaultValue={""} />
+        </div>
+        <div classname="row gy-3">
+          <div classname="col-sm-3">
+            <button type="button" classname="btn btn-cancel">
+              Cancel
+            </button>
+          </div>
+          <div classname="col-sm-3">
+            <button classname="btn btn-submit" type="submit">
+              Post
+            </button>
+          </div>
+        </div>
+      </div>
           </form>
         </>
       ) : (
         <>
           <form>
-            <div className="form-group">
-              <textarea
-                className="form-control"
-                id="input-comment"
-                placeholder="Write a comment..."
-              ></textarea>
-            </div>
-            <div className="form-group row">
-              <div className="col">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  placeholder="Name"
-                />
-              </div>
-              <div className="col">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="name"
-                  placeholder="Email"
-                />
-              </div>
-            </div>
-            <div className="row gy-3">
-              <div className="col-sm-3">
-                <button type="button" className="btn btn-cancel">
-                  Cancel
-                </button>
-              </div>
-              <div className="col-sm-3">
-                <button className="btn btn-submit" type="submit">
-                  Post
-                </button>
-              </div>
-            </div>
+          <div>
+        <div classname="form-group">
+          <textarea classname="form-control" id="input-comment" placeholder="Write a comment..." defaultValue={""} />
+        </div>
+        <div classname="form-group row">
+          <div classname="col">
+            <input type="text" classname="form-control" id="name" placeholder="Name" />
+          </div>
+          <div classname="col">
+            <input type="email" classname="form-control" id="name" placeholder="Email" />
+          </div>
+        </div>
+        <div classname="row gy-3">
+          <div classname="col-sm-3">
+            <button type="button" classname="btn btn-cancel">
+              Cancel
+            </button>
+          </div>
+          <div classname="col-sm-3">
+            <button classname="btn btn-submit" type="submit">
+              Post
+            </button>
+          </div>
+        </div>
+      </div>
           </form>
         </>
       )}

@@ -12,12 +12,14 @@ import Post from "./Components/Blog/Post";
 import Footer from "./Components/Footer/Footer";
 import { fetchBanners } from "./redux/actionCreators/bannerActionCreators";
 import Posts from "./Components/Posts"
+import Content from "./Components/Content/content";
+import Donate from "./Components/Donate/Donate";
 
 
 function App() {
   const isLoading = useSelector((state) => state.post.isLoading);
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (isLoading) {
@@ -35,6 +37,21 @@ function App() {
           <Home />
           <Footer/>
         </Route>
+
+        <Route path="/donate">
+          <NavBarComponentMain/>
+          <Home />
+          <Donate />
+          <Footer/>
+        </Route>
+
+        <Route  path="/content">
+          <NavBarComponentMain/>
+          <Home />
+          <Content />
+          <Footer/>
+        </Route>
+        
         <Route path="/posts/"component={() => <Posts /> }/>
         <Route path="/blog/:postId" component={() => <Post />} />
         <Route path="/admin" component={() => <Admin />} />
