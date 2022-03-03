@@ -11,8 +11,9 @@ import NavBarComponentMain from "./Components/NavBar/NavBar";
 import Post from "./Components/Blog/Post";
 import Footer from "./Components/Footer/Footer";
 import Posts from "./Components/Posts"
-import Content from "./Components/Content/content";
+import Content from "./Components/Content/Content";
 import Donate from "./Components/Donate/Donate";
+import { useLocation } from "react-router-dom";
 
 
 function App() {

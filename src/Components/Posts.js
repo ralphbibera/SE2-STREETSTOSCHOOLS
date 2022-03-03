@@ -12,7 +12,7 @@ const Posts = () => {
       <div>
         <h1>{post.title}</h1>
         <h1>{post.id}</h1>
-        <img src={post.image} />
+        <img src={post.image} alt="Post"/>
 
       </div>
     ))

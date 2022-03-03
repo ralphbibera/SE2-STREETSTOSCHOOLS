@@ -2,9 +2,11 @@
 .carousel-item {
   width: 100%;
   max-width: 100%;
-  padding-top: 95px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   background-size: cover;
+}
+body{
+  padding-top: 95px;
 }
 /* END OF BANNER */

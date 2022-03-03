@@ -1,13 +1,9 @@
 import "../../Stylesheets/table.css";
 import { Button, Col, Form, ProgressBar } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
-import { useDispatch, useSelector } from "react-redux";
-import { shallowEqual } from "react-redux";
+import { useDispatch } from "react-redux";
 import { doBanners } from "../../../redux/actionCreators/bannerActionCreators";
-import { fetchBanners } from "../../../redux/actionCreators/bannerActionCreators";
-import { useHistory } from "react-router";
-import useBanners from "../../useBanners";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { firestore } from "../../../config/firebase";
 

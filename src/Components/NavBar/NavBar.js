@@ -30,7 +30,7 @@ const NavbarComp = () => {
           >
             <ul className="navbar-nav ml-auto d-flex align-items-center">
               <li className="nav-item">
-                <NavLink className="nav-link" to="home" spy={true} smooth={true}>
+                <NavLink className="nav-link" to="/" spy={true} smooth={true}>
                   <a className="nav-link">Home</a>
                 </NavLink>
               </li>

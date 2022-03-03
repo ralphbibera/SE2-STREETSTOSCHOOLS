@@ -1,7 +1,6 @@
 import { toast } from "react-toastify";
 import { firestore, storage } from "../../config/firebase";
 import * as types from "../types/bannerTypes";
-import { collection, doc, setDoc } from "firebase/firestore";
 
 //action
 
@@ -29,7 +28,6 @@ export const doBanners = (data, image, setProgress) => (dispatch) => {
       const document = await res.get();
       const bannerData = { data: document.data(), id: document.id };
       const uploadRef = storage.ref("banners/" + document.id);
-      const newDocRef = doc(collection(firestore, "banners"));
 
       uploadRef.put(image).on(
         "state_change",
