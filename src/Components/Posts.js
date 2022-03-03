@@ -11,7 +11,9 @@ const Posts = () => {
     postList.map((post) => (
       <div>
         <h1>{post.title}</h1>
+        <h1>{post.id}</h1>
         <img src={post.image} />
+
       </div>
     ))
   ) : (

@@ -8,6 +8,8 @@ import { doBanners } from "../../../redux/actionCreators/bannerActionCreators";
 import { fetchBanners } from "../../../redux/actionCreators/bannerActionCreators";
 import { useHistory } from "react-router";
 import useBanners from "../../useBanners";
+import { useCollectionData } from "react-firebase-hooks/firestore";
+import { firestore } from "../../../config/firebase";
 
 const ManageBanner = () => {
   const [title, setTitle] = useState("");
@@ -37,30 +39,16 @@ const ManageBanner = () => {
     const data = {
       title: title,
       image: "",
+      date: new Date(),
     };
     
     dispatch(doBanners(data, image, setProgress));
   };
   
-  const { isLoading, banners } = useSelector(
-    (state) => ({
-      isLoading: state.banner.isLoading,
-      banners: state.banner.banners,
-    }),
-    shallowEqual
-  );
-
-  useEffect(() => {
-    if (isLoading) {
-      dispatch(fetchBanners());
-    }
-  }, [isLoading, dispatch]);
-
-  const myBanners = banners;
-
-  const {bbanners} = useBanners('banners');
-  console.log(bbanners)
-
+  const banners = firestore.collection("banners");
+  const bannerQuery = banners.limit(30).orderBy("date","asc");
+  const [bannerList] = useCollectionData(bannerQuery, {idField: 'id'});
+  console.log(bannerList);
   return (
     <div>
       <Col className="mx-auto">
@@ -105,29 +93,28 @@ const ManageBanner = () => {
         )}
       </Col>
 
-      {isLoading ? (
-        <h1 className="text-center my-5">Loading...</h1>
-      ) : (
-        myBanners.map((bnrs, index) => (
+      {bannerList ? (
+        bannerList && bannerList.map((banners, index) => (
           <table key={index}>
             <tbody style={{ fontsize: "15px" }}>
-              <tr>
+              <tr className="">
                 <td>{index + 1}</td>
-                <td>
-                  <img id="post-img" src={bnrs.bannerData.image} />
+                <td style={{width: "600px"}}>
+                  <img id="banner-img" src={banners.image} />
                 </td>
-                <td>{bnrs.bannerData.title}</td>
-                <td>
+                <td style={{width: "350px"}}>{banners.title}</td>
+                <td className="">
                   <Button className="action-buttons edit-btn">Edit</Button>
-                </td>
-                <td>
-                  <Button className="action-buttons delete-btn">Archive</Button>
+                  <Button className="action-buttons delete-btn ">Archive</Button>
                 </td>
               </tr>
             </tbody>
           </table>
         ))
-      )}
+      ) 
+      : (
+        <>Loading</>
+      ) }
     </div>
   );
 };
