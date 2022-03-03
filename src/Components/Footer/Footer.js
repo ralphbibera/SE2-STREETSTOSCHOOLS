@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="content-container"></div>
       <footer className="footer footer--pin">
         <div className="row d-flex justify-content-center align-items-center text-center">
           <div className="col-md">

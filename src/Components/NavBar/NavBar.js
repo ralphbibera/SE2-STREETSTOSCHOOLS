@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router
 } from "react-router-dom";
 import "../Stylesheets/NavBar.css"
-
+import sts_logo from '../Assets/sts_logo.png';
 
 export default class NavbarComp extends Component {
   render() {
@@ -12,7 +12,7 @@ export default class NavbarComp extends Component {
       <Router>
       <nav className="navbar navbar-custom navbar-light navbar-expand-lg fixed-top">
       <a className="navbar-brand" href="#"></a>
-      <img src="./Images/sts_logo.png" width="100" height="80" alt="STS Logo"/>
+      <img src={sts_logo} width="100" height="80" alt="STS Logo"/>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

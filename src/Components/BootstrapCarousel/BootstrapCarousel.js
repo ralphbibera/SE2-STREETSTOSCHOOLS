@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Stylesheets/BootstrapCarousel.css';
 import bg from '../Assets/bg.png';
+import c1 from '../Assets/c1.png';
+import c2 from '../Assets/c2.png';
+import c3 from '../Assets/c3.png';
 
 export class BootstrapCarousel extends Component {
     render() {
@@ -26,13 +29,13 @@ export class BootstrapCarousel extends Component {
             </button>
             <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="./Images/c1.png" className="d-block w-100 h-100" alt="..."/>
+              <img src={c1} className="d-block w-100 h-100" alt="..."/>
             </div>
             <div className="carousel-item">
-              <img src="./Images/c2.png" className="d-block w-100 h-100" alt="..."/>
+              <img src={c2} className="d-block w-100 h-100" alt="..."/>
             </div>
             <div className="carousel-item">
-                <img src="./Images/c3.png" className="d-block w-100 h-100" alt="..."/>
+                <img src={c3} className="d-block w-100 h-100" alt="..."/>
             </div>
             </div>
       </div>

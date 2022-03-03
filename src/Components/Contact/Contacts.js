@@ -1,6 +1,11 @@
 import React from 'react';
 import '../Stylesheets/Contacts.css';
 import bg from '../Assets/bg.png';
+import ContactUs_Gmail from '../Assets/ContactUs_Gmail.png';
+import ContactUs_FB from '../Assets/ContactUs_FB.png';
+import ContactUs_IG from '../Assets/ContactUs_IG.png';
+import ContactUs_TWT from '../Assets/ContactUs_TWT.png';
+
 
 const Contacts = () => {
 
@@ -56,19 +61,19 @@ const Contacts = () => {
         <div className="flex-container-contact">
           <div className="flex-item-contact" id="div-contact">
             <a href="mailto:streetstoschools.org@gmail.com" target="_blank">
-              <img src="/Images/ContactUs_Gmail.png" alt="fb" style={{ width: "100%" }} /></a>
+              <img src={ContactUs_Gmail} alt="gmail" style={{ width: "100%" }} /></a>
           </div>
           <div className="flex-item-contact" id="div-contact">
             <a href="https://www.facebook.com/StreetstoSchoolsProject/" target="_blank">
-              <img src="/Images/ContactUs_FB.png" alt="ig" style={{ width: "100%" }} /></a>
+              <img src={ContactUs_FB} alt="fb" style={{ width: "100%" }} /></a>
           </div>
           <div className="flex-item-contact" id="div-contact">
             <a href="https://www.instagram.com/streetstoschools.project/" target="_blank">
-              <img src="/Images/ContactUs_IG.png" alt="twt" style={{ width: "100%"}} /></a>
+              <img src={ContactUs_IG} alt="ig" style={{ width: "100%"}} /></a>
           </div>
           <div className="flex-item-contact" id="div-contact">
             <a href="#">
-              <img src="/Images/ContactUs_TWT.png" alt="gmail" style={{ width: "100%", background: "none" }} /></a>
+              <img src={ContactUs_TWT} alt="twitter" style={{ width: "100%", background: "none" }} /></a>
           </div>
         </div>
         <br/>
