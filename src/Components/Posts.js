@@ -1,21 +1,22 @@
 import React from "react";
 import { firestore } from "../config/firebase";
-import { useCollectionData } from "react-firebase-hooks/firestore";
+import { useCollectionData, useDocumentData } from "react-firebase-hooks/firestore";
+import { doc, getDoc } from "firebase/firestore";
 
 const Posts = () => {
   const posts = firestore.collection("posts");
-  const postQuery = posts.limit(30);
-  const [postList] = useCollectionData(postQuery);
+  const postQuery = posts.doc("lqUN2Uttr5CSsrdkrUX1");
+  const [postList] = useDocumentData(postQuery);
+
+  console.log(postList);
 
   return postList ? (
-    postList.map((post) => (
-      <div>
-        <h1>{post.title}</h1>
-        <h1>{post.id}</h1>
-        <img src={post.image} alt="Post"/>
-
-      </div>
-    ))
+    <div className="content-container">
+      <h1>{postList.title}</h1>
+      <h1>{postList.id}</h1>
+      <h1>{postList.description}</h1>
+      <img src={postList.image} alt="Post" />
+    </div>
   ) : (
     <>Loading</>
   );

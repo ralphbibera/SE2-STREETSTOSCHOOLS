@@ -1,11 +1,10 @@
 import { Container, Col, Row } from "react-bootstrap";
+import { useDocumentData } from "react-firebase-hooks/firestore";
 import { shallowEqual, useSelector } from "react-redux";
 import { useParams } from "react-router";
+import { firestore } from "../../config/firebase";
 import "../Stylesheets/Content.css";
 import CommentForm from "./CommentForm";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { firestore } from "../../config/firebase";
-
 
 const Post = () => {
   const { postId } = useParams();
@@ -16,19 +15,14 @@ const Post = () => {
   );
 
   const post = firestore.collection("posts");
-  const postQuery = post.limit(50).orderBy("date", "asc");
-  const [postList] = useCollectionData(postQuery);
-
-  const currentPost =
-  postList.length > 0 && postList.find((pst) => pst.id === postId);
-
+  const postQuery = post.doc(postId);
+  const [postList] = useDocumentData(postQuery);
+  
   if (isLoading) {
     return <div>Loading Post</div>;
   }
 
-
-
-  if (!isLoading && currentPost === undefined) {
+  if (postList === undefined) {
     return (
       <Container>
         <Row>
@@ -39,30 +33,22 @@ const Post = () => {
       </Container>
     );
   }
-
-  
-
-
-
-
-
-
   return (
-    <div className="main_body">
+    <div className="">
       <div className="content-body">
         <div className="container-md">
           <h1 className="content-title" style={{ fontStyle: "5vw" }}>
-            {currentPost.title}
+            {postList.title}
           </h1>
           <p className="content-author-date" style={{ fontStyle: "1vw" }}>
-            By {currentPost.author} |{" "}
+            By {postList.author} |{" "}
             {new Date(
-              currentPost.postData.date.seconds * 1000
+              postList.date.seconds * 1000
             ).toLocaleDateString("en-US", { timeZone: "UTC" })}
           </p>
-          <img src={currentPost.postData.image} style={{ width: "100%" }} />
+          <img src={postList.image} style={{ width: "100%" }} />
           <p className="content-paragraph" style={{ fontStyle: "3vw" }}>
-            {currentPost.postData.description}
+            {postList.description}
           </p>
           <hr className="content-line" />
           <h1 className="content-comment-header" style={{ fontStyle: "2vw" }}>

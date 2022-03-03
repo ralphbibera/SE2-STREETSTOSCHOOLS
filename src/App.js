@@ -41,12 +41,12 @@ function App() {
           <Donate />
         </Route>
 
-        <Route  path="/content">
-          <NavBarComponentMain/>
+        <Route path="/content">
           <Content />
         </Route>
         
         <Route path="/posts/"component={() => <Posts /> }/>
+
         <Route path="/blog/:postId" component={() => <Post />} />
         <Route path="/admin" component={() => <Admin />} />
         {!pathname.includes("/admin") ? <Footer /> : null}
