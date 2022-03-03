@@ -1,4 +1,4 @@
-/* .content-body{
+.content-body{
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
@@ -6,7 +6,7 @@
 .container-md{
   background-color: white;
   margin: 0px auto;
-  margin-top: 50px;
+  margin-top: 0px;
   border-radius: 10px;
   padding: 2rem; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
@@ -108,4 +108,4 @@
   margin-bottom: 25px;
   display: block;
   text-align: left;
-} */
+}

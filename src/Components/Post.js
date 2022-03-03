@@ -4,7 +4,7 @@ import { shallowEqual, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { firestore } from "../../config/firebase";
 import "../Stylesheets/Content.css";
-import CommentForm from "./CommentForm";
+import CommentForm from "../Content/CommentForm";
 import bg from "../Assets/bg.png";
 
 
@@ -37,7 +37,7 @@ const Post = () => {
   }
   return (
     <div
-      class="bg_image content-container"
+      className="bg_image content-container"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover"

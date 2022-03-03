@@ -10,7 +10,6 @@ import { fetchPosts } from "./redux/actionCreators/postActionCreators";
 import NavBarComponentMain from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
 
-import Post from "./Components/Blog/Post";
 import Footer from "./Components/Footer/Footer";
 import Posts from "./Components/Posts";
 import Content from "./Components/Content/Content";
@@ -42,7 +41,7 @@ function App() {
           <Home />
         </Route>
 
-        <Route path="/blog">
+        <Route exact path="/blog">
           <Blog />
         </Route>
 
@@ -62,13 +61,10 @@ function App() {
           <Donate />
         </Route>
 
-        <Route path="/content">
-          <Content />
-        </Route>
-
         <Route path="/posts/" component={() => <Posts />} />
 
-        <Route path="/blog/:postId" component={() => <Post />} />
+        <Route path="/blog/:postId" component={() => <Content />} />
+        
         <Route path="/admin" component={() => <Admin />} />
         {!pathname.includes("/admin") ? <Footer /> : null}
       </Switch>

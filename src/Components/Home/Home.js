@@ -18,16 +18,12 @@ export default class Home extends Component {
           }}
         >
           <Banner />
-          <div className="container">
+          <div className="container-home container">
             <div className="featured">
               <a href="#" style={{ textDecoration: "none" }}>
                 <div className="featured_container_1">
                   <div id="home">
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+
                     <img
                       id="featured_img"
                       src={featured_image}
