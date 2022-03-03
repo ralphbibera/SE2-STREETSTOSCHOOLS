@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../Stylesheets/Content.css";
 import content_img from "../Assets/content_img.png";
 
-class content extends Component {
+class Content extends Component {
   render() {
     return (
       <div className="content-container">
@@ -142,4 +142,4 @@ class content extends Component {
   }
 }
 
-export default content;
+export default Content;

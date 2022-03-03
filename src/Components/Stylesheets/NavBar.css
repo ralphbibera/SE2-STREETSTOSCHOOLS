@@ -1,3 +1,7 @@
+.navbar{
+  padding: 0px 20px 0px 20px;
+
+}
 .nav-item {
   padding: 0.5rem;
 }
@@ -19,7 +23,6 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: black;
-
 }
 
 .navbar-nav {

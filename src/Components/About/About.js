@@ -9,7 +9,7 @@ export default class About extends Component {
   render() {
     return (
         <div
-        class="bg_image"
+        class="bg_image content-container"
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover"

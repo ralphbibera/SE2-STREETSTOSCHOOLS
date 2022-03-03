@@ -12,13 +12,12 @@ export default class Donate extends Component {
   render() {
     return (
       <div
-      class="bg_image"
+      class="bg_image content-container"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover"
       }}>
         <div id="donate">
-        <br/><br/><br/><br/><br/>
         <h1 style={{fontSize: '3.5vw'}} className="text-center">Donation Platforms</h1>
         <div className="flex-container">
           <div>

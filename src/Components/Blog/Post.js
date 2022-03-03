@@ -34,7 +34,7 @@ const Post = () => {
     );
   }
   return (
-    <div className="">
+    <div className="content-container">
       <div className="content-body">
         <div className="container-md">
           <h1 className="content-title" style={{ fontStyle: "5vw" }}>

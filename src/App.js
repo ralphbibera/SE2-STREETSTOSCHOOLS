@@ -8,26 +8,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchPosts } from "./redux/actionCreators/postActionCreators";
 import NavBarComponentMain from "./Components/NavBar/NavBar";
+import { useLocation } from "react-router-dom";
+
 import Post from "./Components/Blog/Post";
 import Footer from "./Components/Footer/Footer";
-import Posts from "./Components/Posts"
+import Posts from "./Components/Posts";
 import Content from "./Components/Content/Content";
 import Donate from "./Components/Donate/Donate";
-import { useLocation } from "react-router-dom";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
 import Contacts from "./Components/Contact/Contacts";
-import BootstrapCarousel from "./Components/BootstrapCarousel/BootstrapCarousel";
 import Register from "./Components/Register/Register";
 import Blog from "./Components/Blog/Blog";
-import Donate from "./Components/Donate/Donate";
-
 
 function App() {
   const { pathname } = useLocation();
   const isLoading = useSelector((state) => state.post.isLoading);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (isLoading) {
@@ -42,17 +40,22 @@ function App() {
         {!pathname.includes("/admin") ? <NavBarComponentMain /> : null}
         <Route exact path="/">
           <Home />
-        <div className="content-wrap">
-          <NavBarComponentMain/>
-          <BootstrapCarousel/>
-        </div>
-          <Home/>
-          <Blog/>
-          <Register/>
-          <About/>
-          <Contacts/>
-          <Donate/>
-          <Footer/>
+          <Contacts />
+        </Route>
+
+        <Route path="/blog">
+          <Blog />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
+
+        <Route path="/about">
+          <About />
+        </Route>
+
+        <Route path="/contacts">
+          <Contacts />
         </Route>
 
         <Route path="/donate">
@@ -62,8 +65,8 @@ function App() {
         <Route path="/content">
           <Content />
         </Route>
-        
-        <Route path="/posts/"component={() => <Posts /> }/>
+
+        <Route path="/posts/" component={() => <Posts />} />
 
         <Route path="/blog/:postId" component={() => <Post />} />
         <Route path="/admin" component={() => <Admin />} />
