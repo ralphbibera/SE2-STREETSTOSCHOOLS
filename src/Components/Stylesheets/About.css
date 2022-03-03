@@ -1,17 +1,16 @@
-/* ABOUT US */
 @media screen and (min-width: 5000px) {
-  #aboutus-img{
+  #aboutus-img {
     width: 100%;
   }
 }
-.col-md-3{
+.col-md-3 {
   padding-top: 13px;
 }
-.about-us-body{
+.about-us-body {
   padding: 25px;
 }
-.container-md{
-  background-color: #FFFFFF;
+.about .container-md {
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 2rem;
   margin: 0px auto;
@@ -22,8 +21,8 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.col-md-6{
-  background-color: #FFFFFF;
+.col-md-6 {
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 2rem;
   margin-top: 20px;
@@ -32,10 +31,10 @@
   text-align: justify;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.row{
+.about .row {
   margin: 0px auto;
 }
-.img-container{
+.img-container {
   padding: 10px;
   text-align: center;
   display: block;
@@ -43,7 +42,7 @@
 .col-md-12 h1 {
   text-align: center;
 }
-.col-md-12 p{
+.col-md-12 p {
   text-align: justify;
 }
 
@@ -57,30 +56,25 @@
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* TRIAL */
-
-.text{
+.text {
   padding: 15px;
   display: flex;
   flex-direction: column;
 }
-.text .title{
+.text .title {
   font-size: 2rem;
   font-weight: bolder;
   color: #272727;
   text-decoration: none;
   text-align: center;
 }
-.text p{
+.text p {
   overflow: hidden;
   margin: 20px 0px;
 }
-.text-team{
+.text-team {
   padding: 5px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-
-/* TRIAL */
-/* END OF ABOUT US */

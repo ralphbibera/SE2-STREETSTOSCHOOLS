@@ -42,20 +42,13 @@ const Contacts = () => {
 
   return (
     <div
-      class="bg_image"
+      class="bg_image content-container"
       style={{
         backgroundImage: `url(${bg})`,
-        backgroundSize: "cover",
-      }}
-    >
+        backgroundSize: "cover"
+      }}>
       <div id="contact">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+
         <h1 className="text-center" style={{ fontSize: "3.5vw" }}>
           Frequently Asked Questions
         </h1>
@@ -148,3 +141,4 @@ const Accordion = (props) => {
 };
 
 export default Contacts;
+

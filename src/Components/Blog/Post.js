@@ -5,6 +5,8 @@ import { useParams } from "react-router";
 import { firestore } from "../../config/firebase";
 import "../Stylesheets/Content.css";
 import CommentForm from "./CommentForm";
+import bg from "../Assets/bg.png";
+
 
 const Post = () => {
   const { postId } = useParams();
@@ -34,7 +36,12 @@ const Post = () => {
     );
   }
   return (
-    <div className="content-container">
+    <div
+      class="bg_image content-container"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover"
+      }}>
       <div className="content-body">
         <div className="container-md">
           <h1 className="content-title" style={{ fontStyle: "5vw" }}>

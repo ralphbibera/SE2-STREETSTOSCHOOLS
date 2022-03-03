@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import "../Stylesheets/Content.css";
 import content_img from "../Assets/content_img.png";
+import bg from '../Assets/bg.png';
 
 class Content extends Component {
   render() {
     return (
-      <div className="content-container">
+      <div
+      class="bg_image content-container"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover"
+      }}>
         <div className="content-body">
           <div className="container-md">
             <h1 className="content-title" style={{ fontStyle: "5vw" }}>

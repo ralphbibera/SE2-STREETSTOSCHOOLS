@@ -42,7 +42,7 @@ const NavbarComp = () => {
               <li className="nav-item">
                 <Link
                   className="nav-link"
-                  to="registration"
+                  to="register"
                   spy={true}
                   smooth={true}
                 >
@@ -57,7 +57,7 @@ const NavbarComp = () => {
               <li className="nav-item">
                 <Link
                   className="nav-link"
-                  to="contact"
+                  to="contacts"
                   spy={true}
                   smooth={true}
                 >
