@@ -40,12 +40,12 @@ function App() {
         {!pathname.includes("/admin") ? <NavBarComponentMain /> : null}
         <Route exact path="/">
           <Home />
-          <Contacts />
         </Route>
 
         <Route path="/blog">
           <Blog />
         </Route>
+
         <Route path="/register">
           <Register />
         </Route>
