@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
-import Home from "./Components/Home/index";
+
 import Admin from "./Admin";
 import { ToastContainer } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,6 +14,13 @@ import Posts from "./Components/Posts"
 import Content from "./Components/Content/Content";
 import Donate from "./Components/Donate/Donate";
 import { useLocation } from "react-router-dom";
+import About from "./Components/About/About";
+import Home from "./Components/Home/Home";
+import Contacts from "./Components/Contact/Contacts";
+import BootstrapCarousel from "./Components/BootstrapCarousel/BootstrapCarousel";
+import Register from "./Components/Register/Register";
+import Blog from "./Components/Blog/Blog";
+import Donate from "./Components/Donate/Donate";
 
 
 function App() {
@@ -35,6 +42,17 @@ function App() {
         {!pathname.includes("/admin") ? <NavBarComponentMain /> : null}
         <Route exact path="/">
           <Home />
+        <div className="content-wrap">
+          <NavBarComponentMain/>
+          <BootstrapCarousel/>
+        </div>
+          <Home/>
+          <Blog/>
+          <Register/>
+          <About/>
+          <Contacts/>
+          <Donate/>
+          <Footer/>
         </Route>
 
         <Route path="/donate">
