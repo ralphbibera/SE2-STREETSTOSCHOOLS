@@ -14,7 +14,7 @@ const NavbarComp = () => {
             alt="STS Logo"
           /></Link>
           <button
-            class="navbar-toggler"
+           className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -22,7 +22,7 @@ const NavbarComp = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
             className="collapse navbar-collapse "
@@ -30,7 +30,7 @@ const NavbarComp = () => {
           >
             <ul className="navbar-nav ml-auto d-flex align-items-center">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/" spy={true} smooth={true}>
+                <NavLink className="nav-link" to="home" spy={true} smooth={true}>
                   <a className="nav-link">Home</a>
                 </NavLink>
               </li>
@@ -42,7 +42,7 @@ const NavbarComp = () => {
               <li className="nav-item">
                 <Link
                   className="nav-link"
-                  to="register"
+                  to="registration"
                   spy={true}
                   smooth={true}
                 >

@@ -10,14 +10,16 @@ import { fetchPosts } from "./redux/actionCreators/postActionCreators";
 import NavBarComponentMain from "./Components/NavBar/NavBar";
 import Post from "./Components/Blog/Post";
 import Footer from "./Components/Footer/Footer";
-import Posts from "./Components/Posts";
-import { useLocation } from "react-router-dom";
+import Posts from "./Components/Posts"
+import Content from "./Components/Content/content";
+import Donate from "./Components/Donate/Donate";
+
 
 function App() {
   const { pathname } = useLocation();
   const isLoading = useSelector((state) => state.post.isLoading);
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (isLoading) {
@@ -33,7 +35,17 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/posts/" component={() => <Posts />} />
+
+        <Route path="/donate">
+          <Donate />
+        </Route>
+
+        <Route  path="/content">
+          <NavBarComponentMain/>
+          <Content />
+        </Route>
+        
+        <Route path="/posts/"component={() => <Posts /> }/>
         <Route path="/blog/:postId" component={() => <Post />} />
         <Route path="/admin" component={() => <Admin />} />
         {!pathname.includes("/admin") ? <Footer /> : null}
