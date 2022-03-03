@@ -1,34 +1,18 @@
 import "../../Stylesheets/table.css";
 import { Switch, Route, useRouteMatch, Link } from "react-router-dom";
 import AddPost from "./AddPost";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { shallowEqual } from "react-redux";
-import { fetchPosts } from "../../../redux/actionCreators/postActionCreators";
 import { useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { useCollectionData } from "react-firebase-hooks/firestore";
+import { firestore } from "../../../config/firebase";
 
 const ManagePost = () => {
   const { path } = useRouteMatch();
-  const dispatch = useDispatch();
   const history = useHistory();
 
-  const { isLoading, posts } = useSelector(
-    (state) => ({
-      isLoading: state.post.isLoading,
-      posts: state.post.posts,
-      userId: state.auth.user_id,
-    }),
-    shallowEqual
-  );
-
-  useEffect(() => {
-    if (isLoading) {
-      dispatch(fetchPosts());
-    }
-  }, [isLoading, dispatch]);
-
-  const myPosts = posts;
+  const post = firestore.collection("posts");
+  const postQuery = post.limit(50).orderBy("date", "asc");
+  const [postList] = useCollectionData(postQuery);
 
   return (
     <div>
@@ -50,20 +34,20 @@ const ManagePost = () => {
                 </tr>
               </thead>
             </table>
-            {isLoading ? (
-              <h1 className="text-center my-5">Loading...</h1>
-            ) : (
-              myPosts.map((pst, index) => (
+            {postList ? (
+              postList && postList.map((post, index) => (
                 <table key={index}>
                   <tbody style={{ fontsize: "15px" }}>
                     <tr>
                       <td>{index + 1}</td>
                       <td>
-                        <Button onClick={()=> history.push('/blog/'+pst.postId)}>
-                          <img id="post-img" src={pst.postData.image} />
+                        <Button
+                          onClick={() => history.push("/blog/" + post.id)}
+                        >
+                          <img id="post-img" src={post.image} />
                         </Button>
                       </td>
-                      <td>{pst.postData.title}</td>
+                      <td>{post.title}</td>
                       <td>
                         <Button className="action-buttons edit-btn">
                           Edit
@@ -78,6 +62,8 @@ const ManagePost = () => {
                   </tbody>
                 </table>
               ))
+            ) : (
+              <>Loading</>
             )}
           </div>
         </Route>

@@ -19,6 +19,7 @@ const AddPost = () => {
   const [author, setAuthor] = useState("");
   const [progress, setProgress] = useState(0);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,6 +55,7 @@ const AddPost = () => {
       createdBy: userId,
     };
     dispatch(doPost(data, image, setProgress));
+    history.push("/admin/dashboard/manage-post")
   };
   return (
     <div>

@@ -5,7 +5,7 @@ import content_img from "../Assets/content_img.png";
 class content extends Component {
   render() {
     return (
-      <div>
+      <div className="content-container">
         <div className="content-body">
           <div className="container-md">
             <h1 className="content-title" style={{ fontStyle: "5vw" }}>

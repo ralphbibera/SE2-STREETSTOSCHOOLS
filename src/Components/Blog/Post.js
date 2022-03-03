@@ -1,8 +1,11 @@
 import { Container, Col, Row } from "react-bootstrap";
 import { shallowEqual, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import "../Stylesheets/Post.css";
+import "../Stylesheets/Content.css";
 import CommentForm from "./CommentForm";
+import { useCollectionData } from "react-firebase-hooks/firestore";
+import { firestore } from "../../config/firebase";
+
 
 const Post = () => {
   const { postId } = useParams();
@@ -12,12 +15,18 @@ const Post = () => {
     shallowEqual
   );
 
+  const post = firestore.collection("posts");
+  const postQuery = post.limit(50).orderBy("date", "asc");
+  const [postList] = useCollectionData(postQuery);
+
   const currentPost =
-    posts.length > 0 && posts.find((pst) => pst.postId === postId);
+  postList.length > 0 && postList.find((pst) => pst.id === postId);
 
   if (isLoading) {
     return <div>Loading Post</div>;
   }
+
+
 
   if (!isLoading && currentPost === undefined) {
     return (
@@ -30,15 +39,23 @@ const Post = () => {
       </Container>
     );
   }
+
+  
+
+
+
+
+
+
   return (
     <div className="main_body">
       <div className="content-body">
         <div className="container-md">
           <h1 className="content-title" style={{ fontStyle: "5vw" }}>
-            {currentPost.postData.title}
+            {currentPost.title}
           </h1>
           <p className="content-author-date" style={{ fontStyle: "1vw" }}>
-            By {currentPost.postData.author} |{" "}
+            By {currentPost.author} |{" "}
             {new Date(
               currentPost.postData.date.seconds * 1000
             ).toLocaleDateString("en-US", { timeZone: "UTC" })}

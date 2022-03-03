@@ -55,6 +55,7 @@ export const doPost = (data, image, setProgress) => (dispatch) => {
             .doc(document.id)
             .update({
               image: url,
+              id: document.id,
             })
             .then(() => {
               postData.data.image = url;

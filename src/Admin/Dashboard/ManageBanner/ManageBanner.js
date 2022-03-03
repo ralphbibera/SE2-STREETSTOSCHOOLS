@@ -44,7 +44,8 @@ const ManageBanner = () => {
   const banners = firestore.collection("banners");
   const bannerQuery = banners.limit(30).orderBy("date","asc");
   const [bannerList] = useCollectionData(bannerQuery, {idField: 'id'});
-  console.log(bannerList);
+
+  
   return (
     <div>
       <Col className="mx-auto">
