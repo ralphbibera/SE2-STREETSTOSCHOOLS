@@ -10,6 +10,9 @@ import NavBarComponentMain from "./Components/NavBar/NavBar";
 import Post from "./Components/Blog/Post";
 import Footer from "./Components/Footer/Footer";
 
+import ManageComments from './Admin/Dashboard/ManageComments/manageComments';
+import ManageAboutUs from './Admin/Dashboard/ManageAboutUs/manageAboutUs';
+
 function App() {
   const isLoading = useSelector((state) => state.post.isLoading);
   const dispatch = useDispatch();
@@ -22,16 +25,23 @@ function App() {
 
   return (
     <div className="App">
-      <ToastContainer />
+          <ManageComments/>
+          <ManageAboutUs/>
+          <ToastContainer />
       <Switch>
         <Route exact path="/">
           <NavBarComponentMain/>
           <Home />
+
+          
+
           <Footer/>
         </Route>
         <Route path="/blog/:postId" component={() => <Post />} />
         <Route path="/admin" component={() => <Admin />} />
-      </Switch>
+      </Switch> 
+
+      
     </div>
   );
 }
