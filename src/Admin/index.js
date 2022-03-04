@@ -35,6 +35,7 @@ function Admin() {
       <Route path={path + "/login"} component={() => <Login />} />
       <Route path={path + "/dashboard"} component={() => <Dashboard />} />
     </Switch>
+    
   );
 }
 
