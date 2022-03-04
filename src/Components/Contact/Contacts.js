@@ -48,7 +48,7 @@ const Contacts = () => {
         backgroundSize: "cover"
       }}>
       <div id="contact">
-
+      <br/><br/><br/><br/>
         <h1 className="text-center" style={{ fontSize: "3.5vw" }}>
           Frequently Asked Questions
         </h1>
