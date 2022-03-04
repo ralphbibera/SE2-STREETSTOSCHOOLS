@@ -33,8 +33,6 @@
   th,td{
     padding: 15px;
     text-align: left;
-    word-wrap: break-word;
-    word-break: break-all;
   }
   
   .action-buttons{

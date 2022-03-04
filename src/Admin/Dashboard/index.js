@@ -8,7 +8,9 @@ import Register from "../Auth/Register/Register";
 import NavbarComponent from "./NavBar/NavbarComponent";
 import ManagePost from "./ManagePost/ManagePost";
 import ManageBanner from "./ManageBanner/ManageBanner";
-
+import ManageAboutUs from "./ManageAboutUs/ManageAboutUs";
+import ManageComments from "./ManageComments/ManageComments";
+import ManageArchives from "./ManageArchives/ManageArchives";
 
 const Dashboard = () => {
   const { path } = useRouteMatch();
@@ -36,11 +38,47 @@ const Dashboard = () => {
           </Route>
           <Route
             path={path + "/manage-banner"}
-            component={() => <ManageBanner/>}
+            component={() => <ManageBanner />}
+          />
+          <Route
+            path={path + "/manage-featured"}
+            component={() => <ManageBanner />}
           />
           <Route
             path={path + "/manage-post"}
             component={() => <ManagePost />}
+          />
+          <Route
+            path={path + "/manage-archives"}
+            component={() => <ManageArchives />}
+          />
+          <Route
+            path={path + "/manage-comments"}
+            component={() => <ManageComments />}
+          />
+          <Route
+            path={path + "/manage-aboutus"}
+            component={() => <ManageAboutUs />}
+          />
+          <Route
+            path={path + "/manage-registration"}
+            component={() => <ManageBanner />}
+          />
+          <Route
+            path={path + "/manage-donation"}
+            component={() => <ManageBanner />}
+          />
+          <Route
+            path={path + "/manage-records"}
+            component={() => <ManageBanner />}
+          />
+          <Route
+            path={path + "/change-donation"}
+            component={() => <ManageBanner />}
+          />
+          <Route
+            path={path + "/manage-changepassword"}
+            component={() => <ManageBanner />}
           />
           <Route path={path + "/adduser"} component={() => <Register />} />
         </Switch>

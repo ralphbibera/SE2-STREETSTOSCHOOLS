@@ -20,9 +20,6 @@ import Contacts from "./Components/Contact/Contacts";
 import Register from "./Components/Register/Register";
 import Blog from "./Components/Blog/Blog";
 
-import ManageComments from "./Admin/Dashboard/ManageComments/manageComments";
-import ManageAboutUs from "./Admin/Dashboard/ManageAboutUs/manageAboutUs";
-
 function App() {
   const { pathname } = useLocation();
   const isLoading = useSelector((state) => state.post.isLoading);
