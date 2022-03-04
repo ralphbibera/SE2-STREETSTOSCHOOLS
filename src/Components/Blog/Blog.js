@@ -116,8 +116,6 @@ export default class Blog extends Component {
                 </div>
           
               </div>
-          
-            
 
             </div>
             <a href={"#"}><button id="more_btn"><p>More Posts</p><img src={forward_Arrow} style={{width: '30px', height: '20px' }}/></button></a>
