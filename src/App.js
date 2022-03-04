@@ -20,6 +20,9 @@ import Contacts from "./Components/Contact/Contacts";
 import Register from "./Components/Register/Register";
 import Blog from "./Components/Blog/Blog";
 
+import ManageComments from "./Admin/Dashboard/ManageComments/manageComments";
+import ManageAboutUs from "./Admin/Dashboard/ManageAboutUs/manageAboutUs";
+
 function App() {
   const { pathname } = useLocation();
   const isLoading = useSelector((state) => state.post.isLoading);
@@ -64,7 +67,7 @@ function App() {
         <Route path="/posts/" component={() => <Posts />} />
 
         <Route path="/blog/:postId" component={() => <Content />} />
-        
+
         <Route path="/admin" component={() => <Admin />} />
         {!pathname.includes("/admin") ? <Footer /> : null}
       </Switch>
