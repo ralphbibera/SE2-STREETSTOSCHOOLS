@@ -5,6 +5,8 @@ import { auth } from "../../../config/firebase";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../../redux/actionCreators/authActionCreators";
 import { useHistory } from "react-router";
+import logo from "../../Assets/logo.png"
+import "../../Stylesheets/login.css"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,9 +14,6 @@ const Login = () => {
 
   const dispatch = useDispatch();
   const history = useHistory();
-
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,15 +41,14 @@ const Login = () => {
   };
 
   return (
-    <Container>
+    <Container className="login-container">
       <Row>
-        <h1>LOGIN</h1>
+        <img src={logo} class="login-logo" alt="logo"/>{" "}
       </Row>
       <Col>
         <Form onSubmit={handleSubmit}>
-      
-          <Form.Group controlId="fullEmailBasicForm" className="my-2">
-            <Form.Control
+          <Form.Group controlId="fullEmailBasicForm" className="my-2 ">
+            <Form.Control className="login-input"
               type="email"
               placeholder="Email"
               value={email}
@@ -58,7 +56,7 @@ const Login = () => {
             />
           </Form.Group>
           <Form.Group controlId="fullPasswordBasicForm" className="my-2">
-            <Form.Control
+            <Form.Control className="login-input"
               type="password"
               placeholder="Password"
               value={pass}
@@ -66,7 +64,7 @@ const Login = () => {
             />
           </Form.Group>
           <Form.Group controlId="fullSubmitBasicForm" className="mt-5">
-            <Button type="submit" variant="secondary" className="form-control">
+            <Button type="submit" variant="secondary" className="login-button">
               Login
             </Button>
           </Form.Group>

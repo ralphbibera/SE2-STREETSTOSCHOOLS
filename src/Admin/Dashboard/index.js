@@ -11,6 +11,9 @@ import ManageBanner from "./ManageBanner/ManageBanner";
 import ManageAboutUs from "./ManageAboutUs/ManageAboutUs";
 import ManageComments from "./ManageComments/ManageComments";
 import ManageArchives from "./ManageArchives/ManageArchives";
+import ManageDonation from "./ManageDonation/ManageDonation";
+import ManageRecords from "./ManageRecords/ManageRecords";
+
 
 const Dashboard = () => {
   const { path } = useRouteMatch();
@@ -66,11 +69,11 @@ const Dashboard = () => {
           />
           <Route
             path={path + "/manage-donation"}
-            component={() => <ManageBanner />}
+            component={() => <ManageDonation />}
           />
           <Route
             path={path + "/manage-records"}
-            component={() => <ManageBanner />}
+            component={() => <ManageRecords />}
           />
           <Route
             path={path + "/change-donation"}

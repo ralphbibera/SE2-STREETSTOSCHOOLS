@@ -44,7 +44,7 @@ const ManagePost = () => {
                         <Button
                           onClick={() => history.push("/blog/" + post.id)}
                         >
-                          <img id="post-img" src={post.image} />
+                          <img id="post-img" src={post.image} alt="..."/>
                         </Button>
                       </td>
                       <td>{post.title}</td>
