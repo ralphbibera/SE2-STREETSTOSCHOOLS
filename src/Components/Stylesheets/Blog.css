@@ -85,3 +85,34 @@
   margin-right: auto;
   width: 100%;
 }
+
+#more_btn1{
+  display: flex;
+  float: right;
+  margin: 0px 50px 30px 0px;
+  border-color: #4C9188;
+  background-color: #4C9188;
+  border-radius: 50px;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 15px;
+  font-weight: 900;
+  width: 160px;
+  height: 40px;
+  color: white;
+  cursor:pointer;   
+}
+#more_btn1:hover {
+transform: scale(1.05);
+}
+#more_btn1 p{
+  position: relative;
+  padding: auto;
+  margin: auto;
+  text-decoration: none;
+}
+#more_btn1 img{
+  position: relative;
+  padding: auto;
+  margin: auto;
+}

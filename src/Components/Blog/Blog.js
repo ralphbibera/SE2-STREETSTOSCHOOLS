@@ -108,7 +108,15 @@ export default class Blog extends Component {
                       <a class="btn read-btn1" href="#" >Read More</a>
               </div>
               </div>  
-              <a href={"#"}><button id="more_btn"><p>More Posts</p><img src={forward_Arrow} style={{width: '30px', height: '20px' }}/></button></a>
+              <a href="#">
+                <button id="more_btn1">
+                  <p>More Posts</p>
+                  <img
+                    src={forward_Arrow}
+                    style={{ height: "20px", width: "30px" }}
+                  />
+                </button>
+              </a>
               </div>
       </div>
   </div>
