@@ -26,39 +26,22 @@ export const doRecord = (data, setProgress) => (dispatch) => {
     .add(data)
     .then(async (res) => {
       const document = await res.get();
-      const postData = { data: document.data(), id: document.id };
-      (postData).on(
-        "state_change",
-        (snapshot) => {
-          const progress = Math.round(
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-          );
-
-          setProgress(progress);
-        },
-        (err) => {
+      const recordData = { data: document.data(), id: document.id };
+      firestore
+        .collection("records")
+        .doc(document.id)
+        .update({
+          id: document.id,
+        })
+        .then(() => {
+          dispatch(addRecord(recordData));
+          toast.success("Record Created");
+        })
+        .catch((err) => {
           console.log(err);
-        },
-        async () => {
-          firestore
-            .collection("records")
-            .doc(document.id)
-            .update({
-              id: document.id,
-            })
-            .then(() => {
-              dispatch(addRecord(postData));
-              toast.success("Record Created");
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        }
-      );
+        });
     })
     .catch((err) => {
       console.log(err);
     });
 };
-
-

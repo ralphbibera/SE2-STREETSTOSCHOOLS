@@ -23,7 +23,7 @@ const AddRecords = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!platform || !donor || !amount || donation_date) {
+    if (!platform || !donor || !amount || !donation_date) {
       return toast.warning("Please fill all fields");
     }
 

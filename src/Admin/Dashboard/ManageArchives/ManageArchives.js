@@ -11,7 +11,7 @@ const ManageArchives = () => {
             <th>ID</th>
             <th>IMAGE</th>
             <th>TITLE</th>
-            <th colspan={2}>ACTIONS</th>
+            <th col={2}>ACTIONS</th>
           </thead>
           <tbody style={{ "font-size": "15px" }} />
           <tr>

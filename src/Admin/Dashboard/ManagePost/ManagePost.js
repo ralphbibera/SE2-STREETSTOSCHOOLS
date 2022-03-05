@@ -30,7 +30,7 @@ const ManagePost = () => {
                   <th>ID</th>
                   <th>IMAGE</th>
                   <th>TITLE</th>
-                  <th colSpan={2}>ACTIONS</th>
+                  <th col={2}>ACTIONS</th>
                 </tr>
               </thead>
             </table>
