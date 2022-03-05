@@ -13,7 +13,7 @@ export default class Blog extends Component {
       <div>
       <div id="blog">
       <div
-    class="bg_image"
+    class="bg_image content-container"
     style={{
       backgroundImage: `url(${bg})`,
       backgroundSize: "cover"
