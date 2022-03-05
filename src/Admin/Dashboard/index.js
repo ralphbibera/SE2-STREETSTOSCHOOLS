@@ -13,6 +13,8 @@ import ManageComments from "./ManageComments/ManageComments";
 import ManageArchives from "./ManageArchives/ManageArchives";
 import ManageDonation from "./ManageDonation/ManageDonation";
 import ManageRecords from "./ManageRecords/ManageRecords";
+import ManageFeatured from "./ManageFeatured/ManageFeatured";
+import ManageRegistration from "./ManageRegistration/ManageRegistration";
 
 
 const Dashboard = () => {
@@ -45,7 +47,7 @@ const Dashboard = () => {
           />
           <Route
             path={path + "/manage-featured"}
-            component={() => <ManageBanner />}
+            component={() => <ManageFeatured />}
           />
           <Route
             path={path + "/manage-post"}
@@ -65,7 +67,7 @@ const Dashboard = () => {
           />
           <Route
             path={path + "/manage-registration"}
-            component={() => <ManageBanner />}
+            component={() => <ManageRegistration />}
           />
           <Route
             path={path + "/manage-donation"}
