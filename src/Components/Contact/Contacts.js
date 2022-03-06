@@ -6,6 +6,7 @@ import ContactUs_FB from "../Assets/ContactUs_FB.png";
 import ContactUs_IG from "../Assets/ContactUs_IG.png";
 import ContactUs_TWT from "../Assets/ContactUs_TWT.png";
 
+
 const Contacts = () => {
   const faqs = [
     {
@@ -26,12 +27,12 @@ const Contacts = () => {
     {
       question: "How can I join?",
       answer:
-        "With the establishment of our 17 chapters across the Philippines, there is definitely a chapter for you! You may message the FB page of Streets to Schools or the FB page of your chosen chapter. You may also access the link for memberships here: [LINK]",
+        "With the establishment of our 17 chapters across the Philippines, there is definitely a chapter for you! You may message the FB page of Streets to Schools or the FB page of your chosen chapter. You may also access the link for memberships here: https://tinyurl.com/Streets2Schools", 
     },
     {
       question: "How can I partner?",
       answer:
-        "STS is open for partnerships for face-to-face projects and online campaigns, you may contact us via our official FB page or through this link: [LINK] You may also contact a specific chapter via their FB page for details concerning a specific partnership with them.",
+        "STS is open for partnerships for face-to-face projects and online campaigns, you may contact us via our official FB page or through this link: https://tinyurl.com/Streets2Schools You may also contact a specific chapter via their FB page for details concerning a specific partnership with them.",
     },
     {
       question: "How can I donate?",
@@ -130,7 +131,7 @@ const Accordion = (props) => {
       </h2>
       <div
         id={`accordion${props.index}`}
-        className="accordion-collapse collapse show"
+        className="accordion-collapse collapse"
         aria-labelledby="headingOne"
         data-bs-parent="#accordionExample"
       >

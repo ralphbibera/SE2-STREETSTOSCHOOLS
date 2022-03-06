@@ -33,12 +33,17 @@
 }
 .about .row {
   margin: 0px auto;
+  padding: 60px;
 }
 .img-container {
-  padding: 10px;
+  width: 130px;
   text-align: center;
   display: block;
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .col-md-12 h1 {
   text-align: center;
 }
@@ -71,10 +76,13 @@
 .text p {
   overflow: hidden;
   margin: 20px 0px;
+  
 }
 .text-team {
   padding: 5px;
-  display: flex;
+  display: relative;
   flex-direction: column;
   text-align: center;
 }
+
+

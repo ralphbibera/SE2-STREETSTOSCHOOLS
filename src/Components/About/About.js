@@ -110,295 +110,295 @@ export default class About extends Component {
                 </div>
                 <div class="col">
                   <div class="img-container">
-                    <img id="team-img" src={member1} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Ambriel Pascual</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Advocacy Coordinator</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member2} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Patricia Bojador</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Advocacy Coordinator</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member3} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Daphne Basuel</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Education and Research</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member4} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Marie Frances Pagaduan</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Deputy Director for Internal Affairs</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member5} style={{ width: "100%" }} />
+                    <img id="team-img" src={member5} style={{ width: "100%" }} alt='member'/>
                   </div>
                   <div class="text-team">
                     <br />
                     <p style={{ fontSize: "22px" }}>
                       <b>Qjiel Mariano</b>
                     </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Founder & Executive Director</i>
+                    <p style={{ fontSize: "16px" }}>
+                        Founder
                     </p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="img-container">
-                    <img id="team-img" src={member6} style={{ width: "100%" }} />
+                    <img id="team-img" src={member4} style={{ width: "100%" }} alt='member'/>
                   </div>
                   <div class="text-team">
                     <br />
                     <p style={{ fontSize: "22px" }}>
-                      <b>Dunton</b>
+                      <b>Marie Frances Pagaduan</b>
                     </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Financier</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member7} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Richard Albert Nick Gonzalez</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Crisis Director</i>
+                    <p style={{ fontSize: "16px" }}>
+                        Deputy Director for Internal Affairs
                     </p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="img-container">
-                    <img id="team-img" src={member8} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Janis Santiago</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Logistics Officer</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member9} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Jessica Jirah Dimaandal</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Partnerships Officer</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member10} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Kiara Venice Delgado</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Memberships Coordinator</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member11} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Trixie Ann Bautista</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Partnerships</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member12} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Kayla Fernandez</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Partnerships</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member13} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Bianca Adia</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Partnerships</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member14} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Aaliyah Duran</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Public Relations</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member15} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Alexa Taay</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Partnerships</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member16} style={{ width: "100%" }} />
-                  </div>
-                  <div class="text-team">
-                    <br />
-                    <p style={{ fontSize: "22px" }}>
-                      <b>Anne Drea Camus</b>
-                    </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Logistics</i>
-                    </p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="img-container">
-                    <img id="team-img" src={member17} style={{ width: "100%" }} />
+                    <img id="team-img" src={member17} style={{ width: "100%" }} alt='member' />
                   </div>
                   <div class="text-team">
                     <br />
                     <p style={{ fontSize: "22px" }}>
                       <b>Charlene Joyce Uy</b>
                     </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Secretariat</i>
+                    <p style={{ fontSize: "16px" }}>
+                        Secretariat
                     </p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="img-container">
-                    <img id="team-img" src={member18} style={{ width: "100%" }} />
+                    <img id="team-img" src={member6} style={{ width: "100%" }} alt='member'/>
                   </div>
                   <div class="text-team">
                     <br />
                     <p style={{ fontSize: "22px" }}>
-                      <b>Jeremiah Dimasacat</b>
+                      <b>Emilyn Dunton</b>
                     </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Stakeholder Engagement Officer</i>
+                    <p style={{ fontSize: "16px" }}>
+                        Financier
                     </p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="img-container">
-                    <img id="team-img" src={member19} style={{ width: "100%" }} />
+                    <img id="team-img" src={member7} style={{ width: "100%" }} alt='member'/>
                   </div>
                   <div class="text-team">
                     <br />
                     <p style={{ fontSize: "22px" }}>
-                      <b>Troy Angelo Miguel Bisa</b>
+                      <b>Richard Gonzalez</b>
                     </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Stakeholder Engagement Officer</i>
+                    <p style={{ fontSize: "16px" }}>
+                        Crisis Director
                     </p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="img-container">
-                    <img id="team-img" src={member20} style={{ width: "100%" }} />
+                    <img id="team-img" src={member10} style={{ width: "100%" }} alt='member' />
                   </div>
                   <div class="text-team">
                     <br />
                     <p style={{ fontSize: "22px" }}>
-                      <b>Margarita Tipton</b>
+                      <b>Kiara Delgado</b>
                     </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Sponsorships and Grants Officer</i>
+                    <p style={{ fontSize: "16px" }}>
+                        Memberships Coordinator
                     </p>
                   </div>
                 </div>
                 <div class="col">
                   <div class="img-container">
-                    <img id="team-img" src={member21} style={{ width: "100%" }} />
+                    <img id="team-img" src={member21} style={{ width: "100%" }} alt='member'/>
                   </div>
                   <div class="text-team">
                     <br />
                     <p style={{ fontSize: "22px" }}>
                       <b>Nicole Ann Vergara</b>
                     </p>
-                    <p style={{ fontSize: "18px" }}>
-                      <i>Strategy and Planning Officer</i>
+                    <p style={{ fontSize: "16px" }}>
+                        Strategy and Planning Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member1} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Ambriel Pascual</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Advocacy Coordinator
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member2} style={{ width: "100%" }} alt='member'/>
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Patricia Bojador</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Advocacy Coordinator
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member9} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Jessica Dimaandal</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Partnerships Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member15} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Alexa Taay</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Partnerships Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member11} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Trixie Bautista</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Partnerships Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member13} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Bianca Adia</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Partnerships Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member12} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Kayla Fernandez</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Partnerships Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member20} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Margarita Tipton</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Sponsorships and Grants Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member14} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Aaliyah Duran</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Public Relations Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member3} style={{ width: "100%" }} alt='member'/>
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Daphne Basuel</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Education and Research Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member8} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Janis Santiago</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                      Logistics Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member16} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Anne Drea Camus</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Logistics Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member18} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Jeremiah Dimasacat</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Stakeholder Engagement Officer
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="img-container">
+                    <img id="team-img" src={member19} style={{ width: "100%" }} alt='member' />
+                  </div>
+                  <div class="text-team">
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      <b>Troy Angelo Bisa</b>
+                    </p>
+                    <p style={{ fontSize: "16px" }}>
+                        Stakeholder Engagement Officer
                     </p>
                   </div>
                 </div>
