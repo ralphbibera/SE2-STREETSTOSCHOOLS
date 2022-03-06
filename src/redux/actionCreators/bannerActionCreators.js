@@ -35,7 +35,6 @@ export const doBanners = (data, image, setProgress) => (dispatch) => {
           const progress = Math.round(
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100
           );
-
           setProgress(progress);
         },
         (err) => {
@@ -84,5 +83,15 @@ export const fetchBanners = () => (dispatch) => {
     .catch((err) => {
       console.log(err);
       toast.error(err);
+    });
+};
+
+export const deleteBanner = (id) => {
+  firestore
+    .collection("banners")
+    .doc(id)
+    .delete()
+    .then(() => {
+      toast.success("Banner deleted successfully");
     });
 };

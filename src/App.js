@@ -4,9 +4,6 @@ import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 import Admin from "./Admin";
 import { ToastContainer } from "react-toastify";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchPosts } from "./redux/actionCreators/postActionCreators";
 import NavBarComponentMain from "./Components/NavBar/NavBar";
 import { useLocation } from "react-router-dom";
 
@@ -22,15 +19,6 @@ import Blog from "./Components/Blog/Blog";
 
 function App() {
   const { pathname } = useLocation();
-  const isLoading = useSelector((state) => state.post.isLoading);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (isLoading) {
-      dispatch(fetchPosts());
-    }
-  }, [isLoading, dispatch]);
 
   return (
     <div className="App">

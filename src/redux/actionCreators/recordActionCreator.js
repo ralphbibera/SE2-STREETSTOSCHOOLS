@@ -1,26 +1,17 @@
 import { toast } from "react-toastify";
-import { firestore, storage } from "../../config/firebase";
+import { firestore } from "../../config/firebase";
 import * as types from "../types/recordTypes";
 
 //action
-const setLoading = (data) => ({
-  type: types.SET_LOADING,
-  payload: data,
-});
-
 const addRecord = (data) => ({
   type: types.ADD_RECORDS,
   payload: data,
 });
 
-const getRecords = (data) => ({
-  type: types.SET_RECORDS,
-  payload: data,
-});
 
 //ACTION CREATORS
 
-export const doRecord = (data, setProgress) => (dispatch) => {
+export const doRecord = (data) => (dispatch) => {
   firestore
     .collection("records")
     .add(data)
@@ -43,5 +34,15 @@ export const doRecord = (data, setProgress) => (dispatch) => {
     })
     .catch((err) => {
       console.log(err);
+    });
+};
+
+export const deleteRecord = (id) => {
+  firestore
+    .collection("records")
+    .doc(id)
+    .delete()
+    .then(() => {
+      toast.success("Record deleted successfully");
     });
 };

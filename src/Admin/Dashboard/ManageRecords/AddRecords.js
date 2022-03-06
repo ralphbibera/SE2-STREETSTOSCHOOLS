@@ -1,20 +1,17 @@
 import { Button, Col, Form, ProgressBar } from "react-bootstrap";
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { doRecord } from "../../../redux/actionCreators/recordActionCreator";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const AddRecords = () => {
-  const { user, userId } = useSelector(
-    (state) => ({ user: state.auth.user, userId: state.auth.user_id }),
-    shallowEqual
-  );
-
   const [platform, setPlatform] = useState("");
   const [amount, setAmount] = useState("");
   const [donor, setDonor] = useState("");
-  const [donation_date, setDonation_date] = useState("");
+  const [donation_date, setDonation_date] = useState(null);
   const [progress, setProgress] = useState(0);
 
   const dispatch = useDispatch();
@@ -54,12 +51,15 @@ const AddRecords = () => {
         ) : (
           <Form onSubmit={handleSubmit} className="p-4">
             <Form.Group controlId="donation_date" className="my-2">
-              <Form.Control
-                type="text"
-                name="donation_date"
-                placeholder="Donation Date"
-                value={donation_date}
-                onChange={(e) => setDonation_date(e.target.value)}
+              <DatePicker
+                className="form-control"
+                selected={donation_date}
+                onChange={(e) => setDonation_date(e)}
+                dateFormat="MM/dd/yyyy"
+                isClearable
+                showYearDropdown
+                scrollableMonthYearDropdown
+                placeholderText="Donation Date"
               />
             </Form.Group>
             <Form.Group controlId="donor" className="my-2">
@@ -89,8 +89,6 @@ const AddRecords = () => {
                 onChange={(e) => setAmount(e.target.value)}
               />
             </Form.Group>
-
-
             <Form.Group controlId="btn" className="my-2">
               <Button
                 type="submit"
